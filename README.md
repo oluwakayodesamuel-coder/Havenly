@@ -3,9 +3,9 @@
 Everyday cleaning, made easy. A cleaning and hygiene booking platform for Lagos.
 Built by Cascade Pod II at Webbo3 Academy, Frontend Development.
 
-Deployed by: YOUR NAME HERE
+Deployed by: Ojo Oluwakayode Samuel
 
-Live site: https://your-username.github.io/havenly/
+Live site: https://oluwakayodesamuel-coder.github.io/Havenly/
 
 ## What it is
 
