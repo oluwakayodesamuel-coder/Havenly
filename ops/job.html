@@ -1,0 +1,40 @@
+<!doctype html>
+<!-- PAGE 14: JOB SHEET (staff only). Owner: Role 14.
+     Your files: ops/job.html, js/pages/ops-job.js, css/pages/ops-job.css
+     Opened from the job board as ops/job.html?ref=HV-ABC123 -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Job sheet | Havenly Operations</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../assets/mark.svg">
+  <link rel="stylesheet" href="../css/havenly.css">
+  <link rel="stylesheet" href="../css/pages/ops-job.css">
+</head>
+<body data-shell="ops" data-page="job">
+  <header data-havenly="header"></header>
+  <main>
+    <section class="section tight">
+      <div class="wrap ops-wrap">
+        <a class="link-arrow back" href="index.html"><i data-icon="back"></i> Job board</a>
+        <div id="jobHead" class="job-head" data-check="job-head"></div>
+        <div class="job-grid">
+          <div class="stack-lg">
+            <div class="card" id="details" data-check="job-details"></div>
+            <div class="card" id="checklist" data-check="job-checklist"></div>
+            <div class="card" id="issues" hidden></div>
+          </div>
+          <div class="stack-lg">
+            <div class="card" id="actions" data-check="job-actions"></div>
+            <div class="card" id="audit" data-check="job-audit"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../js/api.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/pages/ops-job.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<!-- PAGE 13: OPERATIONS JOB BOARD (staff only). Owner: Role 13.
+     Your files: ops/index.html, js/pages/ops-board.js, css/pages/ops-board.css
+     Demo sign-ins (in README.md): ops@havenly.ng / havenly-ops, adaeze@havenly.ng / havenly-lead -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Job board | Havenly Operations</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../assets/mark.svg">
+  <link rel="stylesheet" href="../css/havenly.css">
+  <link rel="stylesheet" href="../css/pages/ops-board.css">
+</head>
+<body data-shell="ops" data-page="board">
+  <header data-havenly="header"></header>
+  <main>
+    <!-- SIGN IN (shown when nobody is signed in) -->
+    <section class="section signin" id="signin" hidden>
+      <div class="wrap">
+        <form class="card pad-lg form signin-card" id="loginForm" novalidate>
+          <span class="icon-tile dark"><i data-icon="shield"></i></span>
+          <h2>Staff sign-in</h2>
+          <p class="muted">For the Havenly operations team and team leads.</p>
+          <div class="field"><label for="email">Email</label><input class="input" id="email" name="email" type="email" autocomplete="username"></div>
+          <div class="field"><label for="password">Password</label><input class="input" id="password" name="password" type="password" autocomplete="current-password"></div>
+          <button class="btn btn-dark btn-block" type="submit" id="loginBtn">Sign in</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- THE BOARD (shown after sign-in) -->
+    <section class="section tight board" id="board" hidden>
+      <div class="wrap ops-wrap stack-lg">
+        <div class="row between">
+          <div><h1 class="board-title">Job board</h1><p class="muted" id="today"></p></div>
+          <div class="row"><input class="input search" id="search" type="search" placeholder="Search name, phone, reference"><input class="input" id="date" type="date" aria-label="Date"></div>
+        </div>
+
+        <div class="grid grid-4 metrics" id="metrics" data-check="ops-metrics"></div>
+
+        <div class="status-tabs" id="statusTabs" role="tablist" data-check="ops-tabs"></div>
+
+        <div class="table-wrap" id="tableWrap" data-check="ops-table"></div>
+      </div>
+    </section>
+  </main>
+  <script src="../js/api.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/pages/ops-board.js"></script>
+</body>
+</html>
