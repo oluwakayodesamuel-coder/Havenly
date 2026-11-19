@@ -1,0 +1,83 @@
+<!doctype html>
+<!-- PAGE 12: HELP CENTRE (how it works, the policy, FAQs, contact). Owner: Role 12.
+     Your files: help.html, js/pages/help.js, css/pages/help.css -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How it works and help | Havenly</title>
+  <link rel="icon" href="assets/mark.svg">
+  <link rel="stylesheet" href="css/havenly.css">
+  <link rel="stylesheet" href="css/pages/help.css">
+</head>
+<body data-page="help">
+  <header data-havenly="header"></header>
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <h1>How it works</h1>
+        <span class="bar"></span>
+        <p class="lead">From booking to a clean home, here is exactly what happens, what it costs and what to do if something is not right.</p>
+      </div>
+    </section>
+
+    <section class="section tight" style="padding-top:0">
+      <div class="wrap">
+        <ol class="journey-steps" data-check="help-steps">
+          <li><span class="icon-tile"><i data-icon="list"></i></span><h4>Choose your service</h4><p class="small muted">See the full price, what is included and what is not, before you book.</p></li>
+          <li><span class="icon-tile"><i data-icon="calendar"></i></span><h4>Pick a day and window</h4><p class="small muted">Monday to Saturday, two-hour arrival windows from 8 AM.</p></li>
+          <li><span class="icon-tile"><i data-icon="check-circle"></i></span><h4>We confirm and assign</h4><p class="small muted">Operations confirms and names the team lead coming to you.</p></li>
+          <li><span class="icon-tile"><i data-icon="sparkle"></i></span><h4>We clean</h4><p class="small muted">On a checklist. We confirm the scope with you before we start.</p></li>
+          <li><span class="icon-tile"><i data-icon="star"></i></span><h4>You check, pay and rate</h4><p class="small muted">Pay by transfer or card when it is done, then rate the team.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section white" id="policy">
+      <div class="wrap split">
+        <div class="stack-lg">
+          <span class="eyebrow">The fine print, in plain words</span>
+          <h2>Cancelling, changing and paying</h2>
+          <span class="bar"></span>
+          <div class="grid grid-2" id="policyCards" data-check="help-policy"></div>
+        </div>
+        <div class="card mint pad-lg">
+          <h3>Where we work</h3>
+          <p class="small muted" style="margin:6px 0 14px">Our pilot covers these Lagos areas.</p>
+          <div class="area-chips" id="areaChips"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <div>
+          <div class="section-head"><span class="eyebrow">Questions</span><h2>Frequently asked</h2><span class="bar"></span></div>
+          <div class="faq" id="faqs" data-check="help-faqs"></div>
+        </div>
+        <div class="stack-lg">
+          <div class="card pad-lg">
+            <h3>Talk to a person</h3>
+            <div class="contact-cards" id="contactCards"></div>
+          </div>
+          <form class="card pad-lg form" id="contactForm" novalidate data-check="help-contact">
+            <h3>Send us a message</h3>
+            <div class="field"><label for="name">Your name</label><input class="input" id="name" name="name" autocomplete="name"></div>
+            <div class="form-row">
+              <div class="field"><label for="email">Email</label><input class="input" id="email" name="email" type="email" autocomplete="email"></div>
+              <div class="field"><label for="phone">Or phone</label><input class="input" id="phone" name="phone" type="tel" autocomplete="tel"></div>
+            </div>
+            <div class="field"><label for="topic">Topic</label><select class="select" id="topic" name="topic"><option>General</option><option>A booking</option><option>Prices</option><option>Working with Havenly</option></select></div>
+            <div class="field"><label for="message">Message</label><textarea class="textarea" id="message" name="message"></textarea></div>
+            <button class="btn btn-block" type="submit" id="sendBtn">Send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer data-havenly="footer"></footer>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/help.js"></script>
+</body>
+</html>

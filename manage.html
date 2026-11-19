@@ -1,0 +1,59 @@
+<!doctype html>
+<!-- PAGE 8: RESCHEDULE OR CANCEL. Owner: Role 8. Your files: manage.html, js/pages/manage.js, css/pages/manage.css
+     Opened from track.html as manage.html?ref=HV-ABC123&phone=0803... -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Change my booking | Havenly</title>
+  <link rel="icon" href="assets/mark.svg">
+  <link rel="stylesheet" href="css/havenly.css">
+  <link rel="stylesheet" href="css/pages/manage.css">
+</head>
+<body data-page="track">
+  <header data-havenly="header"></header>
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <nav class="crumbs"><a href="track.html" id="backLink">Track my booking</a><span>/</span><span>Change</span></nav>
+        <h1>Change my booking</h1>
+        <span class="bar"></span>
+        <p class="lead" id="bookingLine">Loading your booking…</p>
+      </div>
+    </section>
+
+    <section class="section tight" style="padding-top:0">
+      <div class="wrap grid grid-2 manage">
+        <!-- RESCHEDULE -->
+        <form class="card pad-lg form" id="moveForm" novalidate data-check="manage-move">
+          <span class="icon-tile"><i data-icon="calendar"></i></span>
+          <h3>Move to another time</h3>
+          <p class="small muted">Free until 12 hours before your arrival window.</p>
+          <div class="field"><span class="label">New day</span><div class="days" id="days"></div></div>
+          <div class="field"><span class="label">New arrival window</span><div class="choices" id="windows"><p class="muted small">Choose a day first.</p></div></div>
+          <button class="btn btn-dark btn-block" type="submit" id="moveBtn">Move my booking</button>
+        </form>
+
+        <!-- CANCEL -->
+        <form class="card pad-lg form" id="cancelForm" novalidate data-check="manage-cancel">
+          <span class="icon-tile cancel-icon"><i data-icon="x"></i></span>
+          <h3>Cancel the booking</h3>
+          <div id="feeNote"></div>
+          <div class="field">
+            <label for="reason">Why are you cancelling? <span class="muted small">(optional)</span></label>
+            <select class="select" id="reason" name="reason">
+              <option value="">Choose a reason</option><option>Plans changed</option><option>Found another provider</option>
+              <option>Price</option><option>Booked by mistake</option><option>Other</option>
+            </select>
+          </div>
+          <button class="btn btn-danger btn-block" type="submit" id="cancelBtn">Cancel booking</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer data-havenly="footer"></footer>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/manage.js"></script>
+</body>
+</html>

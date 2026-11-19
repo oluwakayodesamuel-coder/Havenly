@@ -1,0 +1,41 @@
+<!doctype html>
+<!-- PAGE 7: TRACK MY BOOKING. Owner: Role 7. Your files: track.html, js/pages/track.js, css/pages/track.css
+     Opened as track.html, or track.html?ref=HV-ABC123&phone=0803... to show a booking straight away. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Track my booking | Havenly</title>
+  <link rel="icon" href="assets/mark.svg">
+  <link rel="stylesheet" href="css/havenly.css">
+  <link rel="stylesheet" href="css/pages/track.css">
+</head>
+<body data-page="track">
+  <header data-havenly="header"></header>
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <h1>Track my booking</h1>
+        <span class="bar"></span>
+        <p class="lead">Enter your booking reference and the phone number you booked with.</p>
+      </div>
+    </section>
+
+    <section class="section tight" style="padding-top:0">
+      <div class="wrap">
+        <form class="card lookup" id="lookupForm" novalidate data-check="track-form">
+          <div class="field"><label for="ref">Booking reference</label><input class="input" id="ref" name="ref" placeholder="HV-ABC123" autocomplete="off" style="text-transform:uppercase" required></div>
+          <div class="field"><label for="phone">Phone number</label><input class="input" id="phone" name="phone" type="tel" placeholder="0803 123 4567" required></div>
+          <button class="btn" type="submit" id="findBtn">Find my booking</button>
+        </form>
+
+        <div id="result" data-check="track-result"></div>
+      </div>
+    </section>
+  </main>
+  <footer data-havenly="footer"></footer>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/track.js"></script>
+</body>
+</html>

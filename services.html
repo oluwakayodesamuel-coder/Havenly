@@ -1,0 +1,53 @@
+<!doctype html>
+<!-- PAGE 2: SERVICES. Owner: Role 2. Your files: services.html, js/pages/services.js, css/pages/services.css -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services | Havenly</title>
+  <link rel="icon" href="assets/mark.svg">
+  <link rel="stylesheet" href="css/havenly.css">
+  <link rel="stylesheet" href="css/pages/services.css">
+</head>
+<body data-page="services">
+  <header data-havenly="header"></header>
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <nav class="crumbs"><a href="index.html">Home</a><span>/</span><span>Services</span></nav>
+        <h1>Our services</h1>
+        <span class="bar"></span>
+        <p class="lead">Every service comes with a fixed checklist, a trained team and a price you see before you book.</p>
+      </div>
+    </section>
+
+    <section class="section tight" style="padding-top:0">
+      <div class="wrap">
+        <div class="filters" id="filters" role="tablist" aria-label="Filter services">
+          <button class="chip on" type="button" data-category="">All services</button>
+          <button class="chip" type="button" data-category="home">Home</button>
+          <button class="chip" type="button" data-category="car">Car</button>
+          <button class="chip" type="button" data-category="business">Business</button>
+        </div>
+        <div class="grid grid-3" id="serviceGrid" data-check="services-grid"></div>
+      </div>
+    </section>
+
+    <section class="section white tight">
+      <div class="wrap">
+        <div class="card mint pad-lg row between">
+          <div class="stack" style="max-width:56ch">
+            <h3>Not sure which clean you need?</h3>
+            <p class="muted">Home Cleaning is for homes that are cleaned often. Deep Cleaning is for homes that need more. Moving? Choose Move-in Cleaning.</p>
+          </div>
+          <a class="btn btn-dark" href="help.html">Ask us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer data-havenly="footer"></footer>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/services.js"></script>
+</body>
+</html>

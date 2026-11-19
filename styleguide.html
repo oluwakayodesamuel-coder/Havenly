@@ -1,0 +1,153 @@
+<!doctype html>
+<!-- THE HAVENLY STYLE GUIDE (shared, do not edit). Every part of the design system, with the HTML to copy. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Style guide | Havenly</title>
+  <link rel="icon" href="assets/mark.svg">
+  <link rel="stylesheet" href="css/havenly.css">
+  <style>
+    .sg { display: grid; gap: 28px; }
+    .sg-item { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+    .sg-live { background: var(--cream); border: 1px solid var(--line); border-radius: 20px; padding: 24px; }
+    .sg-code { margin: 0; background: #0b1d22; color: #d6e7e4; border-radius: 16px; padding: 18px; font: 13px/1.55 ui-monospace, Menlo, Consolas, monospace; overflow-x: auto; white-space: pre-wrap; max-height: 360px; }
+    .sg h2 { font-size: 26px; }
+    .swatches { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+    .swatch { border-radius: 16px; overflow: hidden; border: 1px solid var(--line); background: #fff; }
+    .swatch i { display: block; height: 80px; }
+    .swatch span { display: block; padding: 10px 12px; font-size: 13px; }
+    @media (max-width: 860px) { .sg-item { grid-template-columns: 1fr; } .swatches { grid-template-columns: repeat(2, 1fr); } }
+  </style>
+</head>
+<body data-page="">
+  <header data-havenly="header"></header>
+  <main class="section">
+    <div class="wrap stack-lg">
+      <div class="stack">
+        <span class="eyebrow">For the Cascade Pod II</span>
+        <h1>Havenly style guide</h1>
+        <span class="bar"></span>
+        <p class="lead">Every piece of the design system. Copy the code on the right into your page. Do not invent new colours or sizes: use these, and the whole site will look like one product.</p>
+      </div>
+
+      <div class="swatches">
+        <div class="swatch"><i style="background:#0E3B43"></i><span><b>Ink Teal</b><br>#0E3B43 · var(--teal)</span></div>
+        <div class="swatch"><i style="background:#3DDC97"></i><span><b>Fresh Mint</b><br>#3DDC97 · var(--mint)</span></div>
+        <div class="swatch"><i style="background:#F7F5F0"></i><span><b>Off-White</b><br>#F7F5F0 · var(--cream)</span></div>
+        <div class="swatch"><i style="background:#1C1C1C"></i><span><b>Charcoal</b><br>#1C1C1C · var(--ink)</span></div>
+        <div class="swatch"><i style="background:#D9DEDC"></i><span><b>Mist Grey</b><br>#D9DEDC · var(--mist)</span></div>
+      </div>
+
+      <div class="sg" id="sg"></div>
+    </div>
+  </main>
+  <footer data-havenly="footer"></footer>
+
+  <template data-name="Headings, the mint bar and lead text">
+    <div class="stack">
+      <span class="eyebrow">Small label</span>
+      <h2>A section heading</h2>
+      <span class="bar"></span>
+      <p class="lead">A lead paragraph: one or two sentences that say what this part is for.</p>
+    </div>
+  </template>
+  <template data-name="Buttons">
+    <div class="row">
+      <a class="btn" href="book.html">Book a clean</a>
+      <a class="btn btn-dark" href="#">Dark</a>
+      <a class="btn btn-ghost" href="#">Ghost</a>
+      <button class="btn btn-sm" type="button">Small</button>
+      <a class="link-arrow" href="#">A link with an arrow <i data-icon="arrow"></i></a>
+    </div>
+  </template>
+  <template data-name="Service card">
+    <a class="card card-link service-card" href="service.html?slug=home-cleaning" style="max-width:340px">
+      <div class="media"><img src="assets/photos/home-cleaning.jpg" alt="Home Cleaning"></div>
+      <div class="body">
+        <div class="row"><span class="icon-tile"><i data-icon="home"></i></span><h3>Home Cleaning</h3></div>
+        <p class="muted">A thorough regular clean of your home, room by room.</p>
+        <div class="foot"><span class="money">From ₦25,000</span><span class="link-arrow">Details <i data-icon="arrow"></i></span></div>
+      </div>
+    </a>
+  </template>
+  <template data-name="Cards">
+    <div class="grid grid-2">
+      <div class="card"><h3>A white card</h3><p class="muted">class="card"</p></div>
+      <div class="card mint"><h3>A mint card</h3><p class="muted">class="card mint"</p></div>
+    </div>
+  </template>
+  <template data-name="Form fields">
+    <form class="form" onsubmit="return false">
+      <div class="form-row">
+        <div class="field"><label for="a">Full name</label><input class="input" id="a" name="name"></div>
+        <div class="field"><label for="b">Area</label><select class="select" id="b" name="area"><option>Lekki Phase 1</option></select></div>
+      </div>
+      <div class="field"><label for="c">Notes</label><textarea class="textarea" id="c" name="notes"></textarea><span class="hint">A hint under the field.</span></div>
+      <label class="check"><input type="checkbox" name="agree"> <span>A checkbox with a label</span></label>
+    </form>
+  </template>
+  <template data-name="Choice cards (radio or checkbox tiles)">
+    <div class="choices">
+      <label class="choice"><input type="radio" name="pkg" value="exterior" checked><span><b>Exterior wash</b><small>Body, wheels and windows</small></span></label>
+      <label class="choice"><input type="radio" name="pkg" value="full"><span><b>Inside and out</b><small>Plus seats and mats</small></span></label>
+    </div>
+  </template>
+  <template data-name="Status pills (use H.status in JavaScript)">
+    <div class="row">
+      <span class="status status-new">New request</span><span class="status status-confirmed">Confirmed</span>
+      <span class="status status-in_progress">In progress</span><span class="status status-completed">Completed</span>
+      <span class="status status-issue">Issue</span><span class="status status-cancelled">Cancelled</span>
+    </div>
+  </template>
+  <template data-name="Notices">
+    <div class="stack">
+      <div class="notice"><i data-icon="info"></i><span>Information.</span></div>
+      <div class="notice ok"><i data-icon="check-circle"></i><span>It worked.</span></div>
+      <div class="notice warn"><i data-icon="alert"></i><span>Be careful.</span></div>
+      <div class="notice error"><i data-icon="alert"></i><span>Something went wrong.</span></div>
+    </div>
+  </template>
+  <template data-name="Price lines">
+    <div class="price-lines">
+      <div class="line"><span>Home Cleaning, 1 bedroom</span><span>₦25,000</span></div>
+      <div class="line"><span>Inside the fridge</span><span>₦5,000</span></div>
+      <div class="line total"><span>Total</span><span class="money">₦30,000</span></div>
+    </div>
+  </template>
+  <template data-name="Details list">
+    <dl class="dl"><dt>Service</dt><dd>Deep Cleaning</dd><dt>Date</dt><dd>Thu, 12 Nov 2026</dd></dl>
+  </template>
+  <template data-name="Timeline">
+    <ol class="timeline">
+      <li class="now"><b>Team assigned</b><span class="small">Team Adaeze will do this job.</span><br><time>12 Nov, 9:41 AM</time></li>
+      <li><b>Confirmed</b><time>11 Nov, 4:02 PM</time></li>
+    </ol>
+  </template>
+  <template data-name="Ticks, numbers and stars">
+    <div class="grid grid-2">
+      <ul class="ticks"><li><i data-icon="check"></i><span>Included</span></li></ul>
+      <div class="stat"><b>128</b><span>Jobs completed</span></div>
+    </div>
+  </template>
+  <template data-name="Icons (H.icon(name) in JavaScript, or &lt;i data-icon=&quot;name&quot;&gt; in HTML)">
+    <div class="row" id="iconRow"></div>
+  </template>
+
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script>
+    const H = Havenly.ui;
+    const box = H.$("#sg");
+    H.$$("template").forEach((t) => {
+      const html = t.innerHTML.replace(/^\n|\s+$/g, "").replace(/^ {4}/gm, "");
+      box.insertAdjacentHTML("beforeend", `<section class="sg-item"><div class="sg-live"><h4 style="margin-bottom:16px">${t.dataset.name}</h4>${html}</div>
+        <pre class="sg-code">${H.esc(html)}</pre></section>`);
+    });
+    H.$("#iconRow").innerHTML = ["home", "layers", "key", "building", "car", "briefcase", "check", "x", "calendar", "clock", "pin", "phone", "mail", "star", "shield", "heart", "repeat", "sparkle", "arrow", "user", "users", "search", "info", "alert", "list", "chart", "whatsapp"]
+      .map((n) => `<span class="pill" title="${n}">${H.icon(n)} ${n}</span>`).join("");
+    H.$$("[data-icon]").forEach((el) => { el.outerHTML = H.icon(el.getAttribute("data-icon")); });
+    H.$$("#sg img").forEach((img) => { img.src = H.asset(img.getAttribute("src")); });
+  </script>
+</body>
+</html>

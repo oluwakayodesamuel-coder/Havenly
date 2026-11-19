@@ -1,0 +1,63 @@
+<!doctype html>
+<!-- PAGE 9: RATE OR REPORT. Owner: Role 9. Your files: feedback.html, js/pages/feedback.js, css/pages/feedback.css
+     Opened as feedback.html?ref=...&phone=...  (add &mode=issue to open on "Report a problem") -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How did we do? | Havenly</title>
+  <link rel="icon" href="assets/mark.svg">
+  <link rel="stylesheet" href="css/havenly.css">
+  <link rel="stylesheet" href="css/pages/feedback.css">
+</head>
+<body data-page="track">
+  <header data-havenly="header"></header>
+  <main>
+    <section class="section tight">
+      <div class="wrap narrow">
+        <div class="stack" style="margin-bottom:24px">
+          <h1>How did we do?</h1>
+          <span class="bar"></span>
+          <p class="lead" id="aboutLine">Your feedback goes straight to our operations team.</p>
+        </div>
+
+        <div class="tabs" role="tablist">
+          <button class="tab on" type="button" data-tab="rate">Rate the clean</button>
+          <button class="tab" type="button" data-tab="issue">Report a problem</button>
+        </div>
+
+        <!-- RATE -->
+        <form class="card pad-lg form" id="rateForm" novalidate data-check="feedback-rate">
+          <fieldset class="star-pick">
+            <legend class="label">Your rating</legend>
+            <div class="stars-input">
+              <input type="radio" id="s5" name="rating" value="5"><label for="s5" title="Excellent"><i data-icon="star"></i><span class="sr-only">Excellent</span></label>
+              <input type="radio" id="s4" name="rating" value="4"><label for="s4" title="Good"><i data-icon="star"></i><span class="sr-only">Good</span></label>
+              <input type="radio" id="s3" name="rating" value="3"><label for="s3" title="Okay"><i data-icon="star"></i><span class="sr-only">Okay</span></label>
+              <input type="radio" id="s2" name="rating" value="2"><label for="s2" title="Poor"><i data-icon="star"></i><span class="sr-only">Poor</span></label>
+              <input type="radio" id="s1" name="rating" value="1"><label for="s1" title="Bad"><i data-icon="star"></i><span class="sr-only">Bad</span></label>
+            </div>
+          </fieldset>
+          <div class="field"><label for="comment">Tell us more <span class="muted small">(optional)</span></label>
+            <textarea class="textarea" id="comment" name="comment" placeholder="What did the team do well? What could be better?"></textarea></div>
+          <label class="check"><input type="checkbox" name="share" checked> <span>Havenly may show my first name, area and comment on the website.</span></label>
+          <button class="btn btn-block" type="submit" id="rateBtn">Send my rating</button>
+        </form>
+
+        <!-- REPORT -->
+        <form class="card pad-lg form" id="issueForm" novalidate hidden data-check="feedback-issue">
+          <div class="notice"><i data-icon="info"></i><span>Tell us within 48 hours. We come back to fix it, or agree a fair refund.</span></div>
+          <div class="field"><label for="category">What went wrong?</label><select class="select" id="category" name="category"></select></div>
+          <div class="field"><label for="description">What happened?</label>
+            <textarea class="textarea" id="description" name="description" placeholder="For example: the inside of the kitchen cabinets was not cleaned."></textarea></div>
+          <button class="btn btn-dark btn-block" type="submit" id="issueBtn">Send to operations</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer data-havenly="footer"></footer>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/feedback.js"></script>
+</body>
+</html>

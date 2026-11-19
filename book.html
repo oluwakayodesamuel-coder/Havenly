@@ -1,0 +1,88 @@
+<!doctype html>
+<!-- PAGE 4: BOOK, STEP 1 (what to clean). Owner: Role 4. Your files: book.html, js/pages/book.js, css/pages/book.css
+     Opened as book.html or book.html?service=car-cleaning. Hands over to schedule.html. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a clean | Havenly</title>
+  <link rel="icon" href="assets/mark.svg">
+  <link rel="stylesheet" href="css/havenly.css">
+  <link rel="stylesheet" href="css/pages/book.css">
+</head>
+<body data-page="book">
+  <header data-havenly="header"></header>
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <ol class="steps"><li class="on">Your clean</li><li>Time and details</li><li>Confirmed</li></ol>
+        <h1>Book a clean</h1>
+        <p class="lead">Tell us what needs cleaning. Your price updates as you go.</p>
+      </div>
+    </section>
+
+    <section class="section tight" style="padding-top:0">
+      <div class="wrap split">
+        <form class="form card pad-lg" id="bookForm" novalidate>
+          <div class="field">
+            <span class="label">1. Choose a service</span>
+            <div class="choices services" id="serviceChoices" data-check="book-services"></div>
+          </div>
+
+          <!-- STEP 2 shows one of these two blocks, depending on the service -->
+          <div class="field size-rooms" id="roomsBlock">
+            <span class="label">2. How big is the home?</span>
+            <div class="form-row">
+              <div class="row"><span class="stepper"><button type="button" data-step="bedrooms" data-by="-1" aria-label="Fewer bedrooms">−</button><input name="bedrooms" type="number" min="1" max="8" value="1" aria-label="Bedrooms"><button type="button" data-step="bedrooms" data-by="1" aria-label="More bedrooms">+</button></span><span>Bedrooms</span></div>
+              <div class="row"><span class="stepper"><button type="button" data-step="bathrooms" data-by="-1" aria-label="Fewer bathrooms">−</button><input name="bathrooms" type="number" min="1" max="8" value="1" aria-label="Bathrooms"><button type="button" data-step="bathrooms" data-by="1" aria-label="More bathrooms">+</button></span><span>Bathrooms</span></div>
+            </div>
+          </div>
+
+          <div class="field size-car" id="carBlock" hidden>
+            <span class="label">2. Your car</span>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="car_package" value="exterior" checked><span><b>Exterior wash</b><small>Body, wheels and windows</small></span></label>
+              <label class="choice"><input type="radio" name="car_package" value="full"><span><b>Inside and out</b><small>Plus seats, mats and dashboard</small></span></label>
+            </div>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="car_type" value="saloon" checked><span><b>Saloon or hatchback</b></span></label>
+              <label class="choice"><input type="radio" name="car_type" value="suv"><span><b>SUV or 4x4</b></span></label>
+              <label class="choice"><input type="radio" name="car_type" value="bus"><span><b>Bus or van</b></span></label>
+            </div>
+          </div>
+
+          <div class="field" id="extrasBlock">
+            <span class="label">3. Add-ons <span class="muted small">(optional)</span></span>
+            <div class="choices extras" id="extras" data-check="book-extras"></div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="area">4. Where are you?</label>
+              <select class="select" id="area" name="area" required></select>
+              <span class="hint">We are piloting in these Lagos areas.</span>
+            </div>
+            <div class="field" id="repeatBlock">
+              <label for="recurring">How often?</label>
+              <select class="select" id="recurring" name="recurring">
+                <option value="">Just once</option><option>Weekly</option><option>Every two weeks</option><option>Monthly</option>
+              </select>
+            </div>
+          </div>
+        </form>
+
+        <aside class="card pad-lg summary" aria-live="polite">
+          <span class="eyebrow">Your price</span>
+          <div id="priceBox" data-check="book-price"></div>
+          <button class="btn btn-block" type="submit" form="bookForm" id="continueBtn">Choose a time <i data-icon="arrow"></i></button>
+          <p class="tiny muted">You will not pay now. During the pilot you pay when the job is done.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer data-havenly="footer"></footer>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/book.js"></script>
+</body>
+</html>

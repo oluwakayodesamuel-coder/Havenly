@@ -1,0 +1,62 @@
+<!doctype html>
+<!-- PAGE 5: BOOK, STEP 2 (time and details). Owner: Role 5. Your files: schedule.html, js/pages/schedule.js, css/pages/schedule.css
+     Opened from book.html as schedule.html?service=...&area=...  Hands over to confirmation.html. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Choose a time | Havenly</title>
+  <link rel="icon" href="assets/mark.svg">
+  <link rel="stylesheet" href="css/havenly.css">
+  <link rel="stylesheet" href="css/pages/schedule.css">
+</head>
+<body data-page="book">
+  <header data-havenly="header"></header>
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <ol class="steps"><li class="done">Your clean</li><li class="on">Time and details</li><li>Confirmed</li></ol>
+        <h1>When should we come?</h1>
+        <p class="lead">Pick a day and an arrival window, then tell us where to find you.</p>
+      </div>
+    </section>
+
+    <section class="section tight" style="padding-top:0">
+      <div class="wrap split">
+        <form class="form card pad-lg" id="scheduleForm" novalidate>
+          <div class="field">
+            <span class="label">1. Choose a day</span>
+            <div class="days" id="days" data-check="schedule-days"></div>
+          </div>
+          <div class="field">
+            <span class="label">2. Choose an arrival window</span>
+            <div class="choices" id="windows" data-check="schedule-windows"><p class="muted small">Choose a day first.</p></div>
+          </div>
+
+          <span class="label" style="margin-top:8px">3. Your details</span>
+          <div class="form-row">
+            <div class="field"><label for="name">Full name</label><input class="input" id="name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="phone">Phone number</label><input class="input" id="phone" name="phone" type="tel" autocomplete="tel" placeholder="0803 123 4567" required></div>
+          </div>
+          <div class="field"><label for="email">Email <span class="muted small">(optional, for your receipt)</span></label><input class="input" id="email" name="email" type="email" autocomplete="email"></div>
+          <div class="field"><label for="address">House address</label><textarea class="textarea" id="address" name="address" rows="2" autocomplete="street-address" placeholder="House number, street, estate" required></textarea></div>
+          <div class="field"><label for="access_notes">Gate code, landmark or parking <span class="muted small">(optional)</span></label><input class="input" id="access_notes" name="access_notes"></div>
+
+          <label class="check"><input type="checkbox" name="agree" required> <span>I have read what is included, and the <a href="help.html#policy">cancellation policy</a>: free until 24 hours before.</span></label>
+          <button class="btn btn-block" type="submit" id="bookBtn">Confirm booking</button>
+        </form>
+
+        <aside class="card pad-lg summary">
+          <span class="eyebrow">Your booking</span>
+          <div id="summary" data-check="schedule-summary"></div>
+          <a class="link-arrow small" id="changeLink" href="book.html">Change what to clean</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer data-havenly="footer"></footer>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/schedule.js"></script>
+</body>
+</html>

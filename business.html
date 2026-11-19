@@ -1,0 +1,86 @@
+<!doctype html>
+<!-- PAGE 10: HAVENLY FOR BUSINESS. Owner: Role 10. Your files: business.html, js/pages/business.js, css/pages/business.css -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Havenly for Business | Office and commercial cleaning</title>
+  <link rel="icon" href="assets/mark.svg">
+  <link rel="stylesheet" href="css/havenly.css">
+  <link rel="stylesheet" href="css/pages/business.css">
+</head>
+<body data-page="business">
+  <header data-havenly="header"></header>
+  <main>
+    <section class="biz-hero">
+      <div class="wrap biz-grid">
+        <div class="stack-lg">
+          <span class="eyebrow">Havenly for Business</span>
+          <h1>One accountable cleaning team for your business.</h1>
+          <span class="bar"></span>
+          <p class="lead">Offices, estates, shops and fleets in Lagos. We agree the scope, the days and the times, then the same trained team arrives on schedule with a checklist and a record of every visit.</p>
+          <div class="row"><a class="btn" href="#enquiry">Request a proposal</a><a class="btn btn-ghost" href="tel:+2348134567890">Call the business team</a></div>
+        </div>
+        <img class="biz-photo" src="assets/photos/living-room.jpg" alt="A clean, bright space after a Havenly visit">
+      </div>
+    </section>
+
+    <section class="section white" data-check="business-benefits">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">Why businesses choose us</span><h2>Cleaning you never have to chase</h2><span class="bar"></span></div>
+        <div class="grid grid-3">
+          <div class="card flat benefit"><span class="icon-tile"><i data-icon="user"></i></span><h3>One point of contact</h3><p class="muted">A named account manager for scheduling, issues and invoices.</p></div>
+          <div class="card flat benefit"><span class="icon-tile"><i data-icon="calendar"></i></span><h3>A schedule you agree</h3><p class="muted">Daily, weekly or monthly, at times that do not disturb your work.</p></div>
+          <div class="card flat benefit"><span class="icon-tile"><i data-icon="list"></i></span><h3>Checklists and records</h3><p class="muted">Every visit follows an agreed checklist and is recorded against your site.</p></div>
+          <div class="card flat benefit"><span class="icon-tile"><i data-icon="shield"></i></span><h3>Trained, vetted staff</h3><p class="muted">Reference-checked cleaners trained on safety, privacy and property care.</p></div>
+          <div class="card flat benefit"><span class="icon-tile"><i data-icon="briefcase"></i></span><h3>Clear monthly invoices</h3><p class="muted">One invoice per period, with the visits it covers. No surprises.</p></div>
+          <div class="card flat benefit"><span class="icon-tile"><i data-icon="repeat"></i></span><h3>Fast fixes</h3><p class="muted">A missed task is reported once and put right within an agreed time.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="enquiry">
+      <div class="wrap split">
+        <div class="stack-lg">
+          <span class="eyebrow">Request a proposal</span>
+          <h2>Tell us about your sites</h2>
+          <span class="bar"></span>
+          <p class="muted">We call you within two working days, visit if needed, and send a written proposal with the scope, the schedule and the price.</p>
+          <ul class="ticks">
+            <li><i data-icon="check"></i><span>Offices and co-working spaces</span></li>
+            <li><i data-icon="check"></i><span>Estates and apartment common areas</span></li>
+            <li><i data-icon="check"></i><span>New buildings before handover</span></li>
+            <li><i data-icon="check"></i><span>Fleets and dealerships</span></li>
+          </ul>
+        </div>
+        <form class="card pad-lg form" id="bizForm" novalidate data-check="business-form">
+          <div class="form-row">
+            <div class="field"><label for="company">Company name</label><input class="input" id="company" name="company" autocomplete="organization"></div>
+            <div class="field"><label for="business_type">Type of business</label><select class="select" id="business_type" name="business_type"></select></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="contact_name">Your name</label><input class="input" id="contact_name" name="contact_name" autocomplete="name"></div>
+            <div class="field"><label for="phone">Phone</label><input class="input" id="phone" name="phone" type="tel" autocomplete="tel"></div>
+          </div>
+          <div class="field"><label for="email">Work email</label><input class="input" id="email" name="email" type="email" autocomplete="email"></div>
+          <div class="field"><span class="label">What do you need?</span><div class="choices" id="serviceChecks"></div></div>
+          <div class="form-row">
+            <div class="field"><label for="sites">Number of sites</label><input class="input" id="sites" name="sites" type="number" min="1" value="1"></div>
+            <div class="field"><label for="frequency">How often?</label><select class="select" id="frequency" name="frequency"></select></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="locations">Where are the sites?</label><input class="input" id="locations" name="locations" placeholder="For example: Victoria Island, Lekki"></div>
+            <div class="field"><label for="start_date">Start from</label><input class="input" id="start_date" name="start_date" type="date"></div>
+          </div>
+          <div class="field"><label for="notes">Anything else? <span class="muted small">(optional)</span></label><textarea class="textarea" id="notes" name="notes" rows="3"></textarea></div>
+          <button class="btn btn-dark btn-block" type="submit" id="bizBtn">Send my request</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer data-havenly="footer"></footer>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/business.js"></script>
+</body>
+</html>
