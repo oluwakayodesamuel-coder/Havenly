@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Havenly">
+  <path fill="#FFFFFF" d="M0 0h30v100H0zM70 0h30v100H70zM30 31 50 16 70 31v11L50 27 30 42z"/>
+  <path fill="none" stroke="#0E3B43" stroke-width="5" d="M7 57 50 30.5 93 57"/>
+  <path fill="#FFFFFF" d="M42 67h16v33H42z"/>
+  <path fill="#3DDC97" d="M50 41.5c.9 4.6 2.4 6.1 7 7-4.6.9-6.1 2.4-7 7-.9-4.6-2.4-6.1-7-7 4.6-.9 6.1-2.4 7-7z"/>
+</svg>
