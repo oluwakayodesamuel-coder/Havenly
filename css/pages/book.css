@@ -1,0 +1,9 @@
+/* BOOK STEP 1 styles (Role 4). */
+.services { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+.services .choice { align-items: center; }
+.extras { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+.choices + .choices { margin-top: var(--s3); }
+.field > .form-row .row span:last-child { font-weight: 600; color: var(--teal); }
+
+.summary { position: sticky; top: 96px; display: grid; gap: var(--s4); }
+.money.big { font-size: 34px; line-height: 1.1; }

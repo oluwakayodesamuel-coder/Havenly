@@ -1,0 +1,13 @@
+/* TRACK MY BOOKING styles (Role 7). */
+.lookup { display: grid; grid-template-columns: 1fr 1fr auto; gap: var(--s4); align-items: end; }
+@media (max-width: 760px) { .lookup { grid-template-columns: 1fr; } }
+.ref { font-size: 28px; letter-spacing: .04em; }
+.timeline span { display: inline-block; margin: 2px 0; }
+
+.journey { list-style: none; margin-inline: 0; margin-bottom: 0; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
+.journey li { display: grid; gap: 8px; font-size: 12.5px; color: var(--muted); font-weight: 500; }
+.journey li span { height: 6px; border-radius: 6px; background: var(--mist); }
+.journey li.done span { background: var(--mint); }
+.journey li.now { color: var(--teal); font-weight: 700; }
+.journey li.now span { background: var(--teal); }
+@media (max-width: 520px) { .journey li { font-size: 0; } }

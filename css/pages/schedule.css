@@ -1,0 +1,14 @@
+/* BOOK STEP 2 styles (Role 5). */
+.summary { position: sticky; top: 96px; display: grid; gap: var(--s4); }
+.when { display: flex; gap: 8px; align-items: center; font-weight: 600; color: var(--teal); padding-top: var(--s3); border-top: 1px solid var(--line); }
+.when svg { width: 18px; height: 18px; }
+#windows { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+
+.days { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; scrollbar-width: thin; }
+.day { flex: none; width: 64px; padding: 10px 0; border-radius: 14px; border: 1.5px solid var(--mist); background: #fff; display: grid; justify-items: center; gap: 2px; cursor: pointer; color: var(--teal); transition: all .15s ease; }
+.day span, .day small { font-size: 12px; color: var(--muted); font-weight: 600; }
+.day b { font: 800 22px/1 var(--head); }
+.day:hover:not(:disabled) { border-color: var(--teal); }
+.day.on { background: var(--teal); border-color: var(--teal); color: #fff; }
+.day.on span, .day.on small { color: #b9d3cf; }
+.day:disabled { opacity: .4; cursor: not-allowed; }

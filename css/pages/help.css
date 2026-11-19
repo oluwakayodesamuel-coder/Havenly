@@ -1,0 +1,16 @@
+/* HELP CENTRE styles (Role 12). */
+.policy { display: grid; gap: 8px; align-content: start; }
+.area-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.area-chips .pill { background: #fff; padding: 7px 12px; font-size: 14px; }
+.area-chips svg { width: 14px; height: 14px; }
+.contact-cards { display: grid; gap: 10px; margin-top: 14px; }
+.contact { display: flex; gap: 12px; align-items: center; padding: 12px; border-radius: var(--r); border: 1px solid var(--line); text-decoration: none; color: inherit; transition: border-color .15s ease; }
+.contact:hover { border-color: var(--teal); }
+.contact b { display: block; color: var(--teal); }
+.contact small { color: var(--muted); }
+
+.journey-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s4); counter-reset: step; }
+.journey-steps li { position: relative; counter-increment: step; background: #fff; border: 1px solid var(--line); border-radius: var(--r-lg); padding: var(--s5); display: grid; gap: 10px; align-content: start; }
+.journey-steps li::after { content: counter(step, decimal-leading-zero); position: absolute; top: 20px; right: 20px; font: 800 14px var(--head); color: #b9c6c4; }
+@media (max-width: 900px) { .journey-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .journey-steps { grid-template-columns: 1fr; } }

@@ -1,0 +1,13 @@
+/* RESCHEDULE OR CANCEL styles (Role 8). */
+.manage { align-items: start; }
+.manage .form { align-content: start; }
+#windows { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+
+.days { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; }
+.day { flex: none; width: 64px; padding: 10px 0; border-radius: 14px; border: 1.5px solid var(--mist); background: #fff; display: grid; justify-items: center; gap: 2px; cursor: pointer; color: var(--teal); }
+.day span, .day small { font-size: 12px; color: var(--muted); font-weight: 600; }
+.day b { font: 800 22px/1 var(--head); }
+.day.on { background: var(--teal); border-color: var(--teal); color: #fff; }
+.day.on span, .day.on small { color: #b9d3cf; }
+.day:disabled { opacity: .4; cursor: not-allowed; }
+.cancel-icon { background: var(--red-soft); color: var(--red); }

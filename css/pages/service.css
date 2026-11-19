@@ -1,0 +1,10 @@
+/* SERVICE DETAILS styles (Role 3). */
+.service-photo { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: center 25%; border-radius: var(--r-lg); box-shadow: var(--shadow); }
+.facts { display: flex; flex-wrap: wrap; gap: 10px; }
+.facts span { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; background: #fff; border: 1px solid var(--line); font-weight: 600; font-size: 14.5px; color: var(--teal); }
+.facts svg { width: 17px; height: 17px; }
+
+.price-card { position: sticky; top: 96px; display: grid; gap: var(--s4); }
+.money.big { font-size: 36px; line-height: 1; }
+.center { text-align: center; display: flex; gap: 6px; justify-content: center; align-items: center; }
+.center svg { width: 15px; height: 15px; }

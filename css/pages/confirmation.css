@@ -1,0 +1,11 @@
+/* BOOKING CONFIRMED styles (Role 6). */
+.narrow { max-width: 720px; }
+.confirm { display: grid; gap: var(--s5); justify-items: stretch; }
+.confirm .dl { padding: var(--s4) var(--s5); background: var(--cream); border-radius: var(--r); }
+.next { margin-top: var(--s5); display: grid; gap: var(--s5); }
+.next .timeline span { display: block; }
+
+.tick { width: 72px; height: 72px; margin: 0 auto; border-radius: 50%; background: var(--mint); color: var(--teal); display: grid; place-items: center; box-shadow: 0 0 0 10px var(--mint-soft); }
+.tick svg { width: 36px; height: 36px; stroke-width: 2.6; }
+.ref-box { display: grid; justify-items: center; gap: 6px; padding: 20px; border: 2px dashed #9fd9be; border-radius: var(--r-lg); background: #f6fcf9; }
+.ref { font: 800 34px/1 var(--head); letter-spacing: .08em; color: var(--teal); }

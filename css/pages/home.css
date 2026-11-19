@@ -1,0 +1,33 @@
+/* HOME PAGE styles (Role 1). Only for index.html. Shared styles live in css/havenly.css. */
+
+.hero { padding: var(--s7) 0 var(--s8); overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: var(--s7); align-items: center; }
+.hero-copy { display: grid; gap: var(--s5); justify-items: start; }
+.hero-proof { display: flex; align-items: center; gap: 10px; min-height: 24px; }
+.hero-media { position: relative; justify-self: end; width: min(100%, 440px); }
+.hero-media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; border-radius: 28px; box-shadow: var(--shadow-lg); }
+.hero-media::before { content: ""; position: absolute; inset: 28px -24px -24px 28px; border-radius: 28px; background: var(--mint-soft); z-index: -1; }
+.float-card { position: absolute; left: -36px; bottom: 36px; display: flex; gap: 12px; align-items: center; background: #fff; padding: 14px 18px 14px 14px; border-radius: 16px; box-shadow: var(--shadow-lg); }
+.float-card b { display: block; color: var(--teal); }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-media { justify-self: center; }
+  .float-card { left: 12px; }
+}
+
+.section-head-row { align-items: flex-end; margin-bottom: var(--s6); }
+.section-head-row .section-head { margin-bottom: 0; }
+
+.how-step { position: relative; padding: var(--s5); border-radius: var(--r-lg); background: #fff; border: 1px solid var(--line); display: grid; gap: var(--s3); }
+.how-step .num { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--teal); color: var(--mint); font: 800 18px var(--head); }
+
+.value { display: grid; gap: var(--s3); align-content: start; }
+
+.review { margin: 0; display: grid; gap: var(--s4); align-content: start; }
+.review blockquote { margin: 0; font: 600 17px/1.55 var(--head); color: var(--teal); }
+.review figcaption { display: grid; gap: 2px; }
+
+.business-band { display: grid; grid-template-columns: 1.4fr .6fr; gap: var(--s6); align-items: center; background: var(--teal); color: #cfe0dd; border-radius: 28px; padding: var(--s7); overflow: hidden; }
+.business-band h2 { color: #fff; max-width: 18ch; }
+.business-band img { width: 100%; max-width: 240px; justify-self: center; border-radius: 22px; transform: rotate(4deg); box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .5); }
+@media (max-width: 760px) { .business-band { grid-template-columns: 1fr; padding: var(--s6) var(--s5); } .business-band img { max-width: 200px; } }

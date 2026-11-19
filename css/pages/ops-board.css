@@ -1,0 +1,18 @@
+/* OPERATIONS JOB BOARD styles (Role 13). */
+.board-title { font-size: 32px; }
+.search { width: 280px; }
+#date { width: auto; }
+.board .row.between > .row { flex-wrap: nowrap; }
+@media (max-width: 700px) { .search { width: 100%; } .board .row.between > .row { flex-wrap: wrap; } }
+.mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; letter-spacing: .02em; color: var(--teal); }
+.flag { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--red); vertical-align: middle; }
+.signin { min-height: 70vh; display: grid; align-items: center; }
+.signin-card { max-width: 440px; margin: 0 auto; }
+
+.metric { display: grid; gap: 4px; padding: 18px 20px; }
+.metric b { font: 800 30px/1.1 var(--head); color: var(--teal); letter-spacing: -.02em; }
+.status-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.stab { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--mist); background: #fff; border-radius: 999px; padding: 7px 8px 7px 14px; font-size: 14px; font-weight: 600; color: var(--teal); cursor: pointer; }
+.stab span { min-width: 24px; padding: 2px 7px; border-radius: 999px; background: #eef0ef; font-size: 12.5px; text-align: center; }
+.stab.on { background: var(--teal); border-color: var(--teal); color: #fff; }
+.stab.on span { background: var(--mint); color: var(--teal); }
